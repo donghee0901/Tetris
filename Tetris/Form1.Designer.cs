@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(222 + 88 + 50, 442);
+            this.KeyPreview = true;
+            this.Name = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+        private static System.Windows.Forms.PictureBox[,] Map_block = new System.Windows.Forms.PictureBox[20, 10];
+        private static System.Windows.Forms.PictureBox[,] Next_block = new System.Windows.Forms.PictureBox[4, 4];
+        private static System.Windows.Forms.PictureBox[,] Save_block = new System.Windows.Forms.PictureBox[4, 4];
+        private static System.Windows.Forms.Label ScoreBox;
     }
 }
 
